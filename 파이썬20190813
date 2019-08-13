@@ -950,3 +950,79 @@ b
 
 ###############################################################################
 ###############################################################################
+"a"<"b"
+True
+"a">"b"
+False
+IDLE
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+NameError: name 'IDLE' is not defined
+"Pycharm"<"Anaconda"
+False
+"Pycharm">"Anaconda"
+True
+a=1
+b="python"
+c=[1,2,3]
+"sex"="girl"
+  File "<input>", line 1
+SyntaxError: can't assign to literal
+id(a)
+1791845552
+id(c)
+59740888
+"김현태"<"짐승"
+True
+"박찬용">"평범한 인간"
+False
+ID(C)
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+NameError: name 'ID' is not defined
+id(c)
+59740888
+a = 1
+b=1
+id(a)
+1791845552
+id(b)
+1791845552
+a is b
+True
+c[1]
+2
+c[1]=4
+"Python">"C"
+True
+"Python">"Java"
+True
+a=[1,2,3]
+b=a[:]
+id(a)
+59727744
+id(b)
+55855544
+a[1]=4
+from copy import copy
+b=copy(a)
+b is a
+False
+"문경록"="병신"
+  File "<input>", line 1
+SyntaxError: can't assign to literal
+"문경록"=="병신"
+False
+"문경록"<"병신"
+True
+a, b =('python', 'life')
+(a, b) = 'python', 'life'
+[a,b] = ['python', 'life']
+a=3
+b=5
+a, b = b, a
+a
+5
+b
+3
+
