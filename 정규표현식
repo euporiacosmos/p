@@ -1,0 +1,111 @@
+data = '''
+park 800905-1049118
+kim  700905-1059119
+'''
+
+result = []
+for line in data.split('\n'):
+    word_result = []
+    for word in line.split(" "):
+        if len(word) == 14 and word[:6].isdigit() and word[7:].isdigit():
+            word = word[:6] + "-" + "*******"
+        word_result.append(word)
+    result.append(" ".join(word_result))
+print("\n".join(result))
+-------------------------------------------------------------------------------------
+import re
+
+data = """
+park 800905-1049118
+kim  700905-1059119
+"""
+
+pat = re.compile("(\d{6})[-]\d{7}")
+print(pat.sub("\g<1>-*******", data))
+-------------------------------------------------------------------------------------
+p = re.compile('[a-z]+')
+
+m = p.match("python")
+m = p.search("python")
+
+print(m)
+
+result = p.finditer("life is too short")
+
+print(result)
+
+m.group()
+
+m.start()
+
+m.end()
+
+m.span()
+--------------------------------------------------------------------------------------
+import re
+
+p = re.compile('a.b')
+m = p.match('a\nb')
+print(m)
+
+p = re.compile("^python\s\w+", re.MULTILINE)
+
+data = """python one life is too short python two you need python python three"""
+
+print(p.findall(data))
+--------------------------------------------------------------------------------------
+p = re.compile('Crow|Servo')
+
+m = p.match('CrowHello')
+print(m)
+
+print(re.search('^Life', 'Life is too short'))
+
+print(re.search('^Life', 'My Life'))
+
+p = re.compile(r'\Bclass\B')
+
+print(p.search('no class at all'))
+
+print(p.search('the declassified algorithm'))
+
+print(p.search('one subclass is'))
+
+p = re.compile('(ABC)+')
+
+m = p.search('ABCABCABC OK?')
+
+print(m)
+
+print(m.group())
+
+p = re.compile(r'(\w+)\s+\d+[-]\d+[-]\d+')
+m = p.search('park 010-4085-7552')
+print(m.group(1))
+print(m.group(2))
+print(m.group(3))
+
+p = re.compile('.+(?=:)')
+
+m = p.search('http://google.com')
+
+print(m.group())
+
+p = re.compile(r'(?P<name>\w+)\s+(?P<phone>(\d+)[-]\d+[-]\d+)')
+
+print(p.sub('\g<2> \g<1>', 'park 010-4085-7552'))
+
+def hexrepl(match):
+    value = int(match.group())
+    return hex(value)
+
+p = re.compile(r'\d+')
+p.sub(hexrepl, 'Call 65490 for printing, 49152 for user code.')
+
+s = '<html><head><title>Title</title>'
+
+len(s)
+
+print(re.match('<.*>', s).group())
+
+print(re.match('<.*?>', s).group())
