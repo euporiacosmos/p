@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+	int num = 100; // 변수의 초기화
+	short s = 50;
+	long l = 20000;
+	double d;
+	char ch;
+	float f;
+	ch = 'A';
+	f = 3.14;
+	d = 10004.5678;
+
+	printf("%c\n", ch);
+	printf("%d\n", s);
+	printf("%d\n", num);
+	printf("%d\n", l);
+	printf("%f\n", f);
+	printf("%f\n", d);
+
+	return 0;
+}
