@@ -2,21 +2,100 @@
 
 int main()
 {
-	int num = 3;
+	int num;
+
+	scanf("%d", num);
 
 	switch(num)
 	{
 	case 1:
 		printf("유재석\n");
+		printf("1인자\n");
+		printf("1인자\n");
+		printf("1인자\n");
+		printf("1인자\n");
+		printf("1인자\n");
+		printf("1인자\n");
+		printf("1인자\n");
+		printf("1인자\n");
+		printf("1인자\n");
+		printf("1인자\n");
+		printf("1인자\n");
+		printf("1인자\n");
+		printf("1인자\n");
 		break;
 	case 2:
 		printf("박명수\n");
+		printf("2인자\n");
+		printf("인성갑\n");
+		printf("2인자\n");
+		printf("인성갑\n");
+		printf("2인자\n");
+		printf("인성갑\n");
+		printf("2인자\n");
+		printf("인성갑\n");
+		printf("2인자\n");
+		printf("인성갑\n");
+		printf("2인자\n");
+		printf("인성갑\n");
+		printf("2인자\n");
+		printf("인성갑\n");
+		printf("2인자\n");
+		printf("인성갑\n");
+		printf("2인자\n");
+		printf("인성갑\n");
 		break;
 	case 3:
 		printf("하하\n");
 		break;
 	case 4:
 		printf("노홍철\n");
+		printf("돌I");
+		printf("미친텐션");
+		printf("한라봉");
+		printf("돌I");
+		printf("미친텐션");
+		printf("한라봉");
+		printf("돌I");
+		printf("미친텐션");
+		printf("한라봉");
+		printf("돌I");
+		printf("미친텐션");
+		printf("한라봉");
+		printf("돌I");
+		printf("미친텐션");
+		printf("한라봉");
+		printf("돌I");
+		printf("미친텐션");
+		printf("한라봉");
+		printf("돌I");
+		printf("미친텐션");
+		printf("한라봉");
+		printf("돌I");
+		printf("미친텐션");
+		printf("한라봉");
+		printf("돌I");
+		printf("미친텐션");
+		printf("한라봉");
+		printf("돌I");
+		printf("미친텐션");
+		printf("한라봉");
+		printf("돌I");
+		printf("미친텐션");
+		printf("한라봉");
+		printf("돌I");
+		printf("미친텐션");
+		printf("한라봉");
+		printf("돌I");
+		printf("미친텐션");
+		printf("한라봉");
+		printf("돌I");
+		printf("미친텐션");
+		printf("한라봉");
+		printf("돌I");
+		printf("미친텐션");
+		printf("한라봉");
+
 		break;
 	case 5:
 		printf("정형돈\n");
@@ -29,5 +108,5 @@ int main()
 		break;
 	}
 	
-	return 0;
+	return 1;
 }
