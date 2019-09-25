@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+int main(){
+	int n, m, swap;
+	printf("입력 N : ");
+	scanf("%d", &n);
+	printf("입력 M : ");
+	scanf("%d", &m);
+	printf("교환 전 : N = %d, M = %d\n", n, m);
+	if (m>n){
+		swap = m - n;
+		n = swap + n;
+		m = m - swap;
+	}
+	else{
+		swap = n - m;
+		n = n - swap;
+		m = swap + m;
+	}
+	printf("교환 후 : N = %d, M = %d\n", n, m);
+}
