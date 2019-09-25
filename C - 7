@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+int main(){
+
+	int a, b;
+
+	printf("입력 a : ");
+	scanf("%d", &a);
+	printf("입력 b : ");
+	scanf("%d", &b);
+
+	printf("입력 : a(%d), b(%d)\n", a, b);
+
+	if(a>b){
+		printf("결과 : a(%d)\n", a);
+	}
+	else{
+		printf("결과 : b(%d)\n", b);
+	}
+
+	return 0;
+}
