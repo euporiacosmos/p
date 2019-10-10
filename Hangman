@@ -56,16 +56,95 @@ int InputChar (char com[], char p[]){
 	}
 }
 
+void GoNextStep(){
+	g_step++;
+	printf("hang man step:%d\n", g_step);
+}
+
+void ShowHangman(){
+	printf("\n");
+	switch(g_step)
+	{
+	case 0:
+		printf("     ┏━┓\n");
+		printf("       ┃\n");
+		printf("       ┃\n");
+		printf("       ┃\n");
+		printf("       ┃\n");
+		printf("       ┃\n");
+		break;
+	case 1:
+		printf("     ┏━┓\n");
+		printf("     ●┃\n");
+		printf("       ┃\n");
+		printf("       ┃\n");
+		printf("       ┃\n");
+		printf("       ┃\n");
+		break;
+	case 2:
+		printf("     ┏━┓\n");
+		printf("     ●┃\n");
+		printf("    ┏╋┓┃\n");
+		printf("       ┃\n");
+		printf("       ┃\n");
+		printf("       ┃\n");
+		break;
+	case 3:
+		printf("     ┏━┓\n");
+		printf("     ●┃\n");
+		printf("    ┏╋┓┃\n");
+		printf("     ┃ ┃\n");
+		printf("       ┃\n");
+		printf("       ┃\n");
+		break;
+	case 4:
+		printf("     ┏━┓\n");
+		printf("     ●┃\n");
+		printf("    ┏╋┓┃\n");
+		printf("     ┃ ┃\n");
+		printf("    ┏┻┓┃\n");
+		printf("       ┃\n");
+		break;
+	default:
+		break;
+	}
+}
+
+int CheckGameOver(char *com, char *p){
+	if(g_step==4)
+	{
+		puts("You Lost!");
+		return 1;
+	}
+
+	if(strcmp(com,p)==0)
+	{
+		puts("You Win!");
+		return 1;
+	}
+
+	return 0;
+}
+
 int main(){
 	char com[MY_WORD_LEN];
 	char p[MY_WORD_LEN];
 
 	IniGame(com, p);
 
-	printf("%s\n", com);
-	printf("%s\n", p);
+	while(1)
+	{
+		if(InputChar(com,p) == 0)
+		{
+			GoNextStep();
+			ShowHangman();
+		}
 
-	printf("%s\n", g_dic[0]);
+		if(CheckGameOver(com,p) == 1)
+		{
+			break;
+		}
+	}
 
-    return 0;
+	return 0;
 }
